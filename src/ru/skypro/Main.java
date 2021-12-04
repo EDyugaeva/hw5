@@ -109,14 +109,15 @@ public class Main {
 
     public static void task7() {
 //        //        Седьмая задача (Повышенная сложность)
-//        int[] arr = {1, 2, 3, 4, 5};
-//        System.out.println(Arrays.toString(arr));
-////        for (int i = arr.length - 1; i > 0; i--) {
-////            int a = 4;
-////            arr[i] = arr[i - a];
-//
-//        System.out.println(Arrays.toString(arr));
-
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(arr));
+        int arr0 = arr[4];
+        arr[4] = arr[0];
+        arr[0]=arr0;
+        arr0 = arr[3];
+        arr[3] = arr[1];
+        arr[1]=arr0;
+        System.out.println(Arrays.toString(arr));
     }
 
 
