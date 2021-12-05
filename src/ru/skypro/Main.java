@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        task1();
-        task6();
+//        task1();
+//        task6();
         task7();
-        task8();
-        task9();
+//        task8();
+//        task9();
         // write your code here
     }
 
@@ -109,14 +109,13 @@ public class Main {
 
     public static void task7() {
 //        //        Седьмая задача (Повышенная сложность)
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {1, 2, 3, 4, 5, 6, 10};
         System.out.println(Arrays.toString(arr));
-        int arr0 = arr[4];
-        arr[4] = arr[0];
-        arr[0]=arr0;
-        arr0 = arr[3];
-        arr[3] = arr[1];
-        arr[1]=arr0;
+        for (int i = 0; i < arr.length / 2; i++) {
+            int arr0 = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = arr[i];
+            arr[i] = arr0;
+        }
         System.out.println(Arrays.toString(arr));
     }
 
@@ -128,8 +127,9 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 if (arr[i] + arr[j] == -2) {
-                    System.out.println("Эти числа: " + arr[i] + " и "+ arr[j]);
-                } break;
+                    System.out.println("Эти числа: " + arr[i] + " и " + arr[j]);
+                }
+                break;
             }
         }
     }
@@ -141,7 +141,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 if (arr[i] + arr[j] == -2) {
-                    System.out.println("Пары чисел, которые в сумме дают 2: " + arr[i] + " и "+ arr[j]);
+                    System.out.println("Пары чисел, которые в сумме дают 2: " + arr[i] + " и " + arr[j]);
                 }
             }
         }
